@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ِInnoTech API Form</title>
+	<style type="text/css">
+		@keyframes gradient { 
+			0%{background-position:0 0}
+			100%{background-position:100% 0}
+		}
+		*{
+			box-sizing: border-box;
+			padding: 0px;
+			margin: 0px;
+			font-family: sans-serif;
+		}
+		body{
+			background-color: dodgerblue;
+		}
+		main{
+			width: 60%;
+			margin: auto;
+		}
+		#form-title{
+			text-align: center;
+			padding: 10px;
+			/*background-color: midnightblue;*/
+			background-position: 0% 0%;
+			background: linear-gradient(to right, midnightblue, blue ,navy, blue, midnightblue, blue);
+			background-size: 500% auto;
+			animation: gradient 5s linear infinite;
+
+			font-size: 20px;
+			color: white;
+			font-weight: bold;
+			margin-top: 20px;
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+		}
+		#form-body{
+			background-color: white;
+			border: 2px solid midnightblue;
+			padding: 6px;
+		}
+		form input[type='text'],[type='password']{
+			display: block;
+			width: 100%;
+			border-radius: 5px;
+			border-style: groove;
+			padding: 3px;
+			margin-top: 4px;
+			margin-bottom: 6px;
+			height: 38px;
+		}
+		form input[type="file"]{
+			display: block;
+			margin: 6px;
+		}
+		form select{
+			display: block;
+			width: 100%;
+			border-radius: 5px;
+			border-style: groove;
+			padding: 3px;
+			margin-top: 4px;
+			margin-bottom: 6px;
+			height: 38px;
+		}
+		form button{
+			width: 23%;
+			height: 30px;
+			border-radius: 4px;
+			border-style: hidden;
+			margin: auto;
+			font-weight: bold;
+			transition: background-color 0.5s ease-out;
+		}
+		.create-button:hover{
+			background-color: blue;
+			color: white;
+			cursor: pointer;
+			transition: background-color 0.5s ease;
+		}
+		.update-button:hover{
+			background-color: green;
+			color: white;
+			cursor: pointer;
+			transition: background-color 0.5s ease;
+		}
+		.delete-button:hover{
+			background-color: red;
+			color: white;
+			cursor: pointer;
+			transition: background-color 0.5s ease;
+		}
+		.rest-button:hover{
+			background-color: orange;
+			color: white;
+			cursor: pointer;
+			transition: background-color 0.5s ease;
+		}
+		form .radio-set{
+			padding: 6px;
+		}
+		.form-buttons{
+			display: flex;
+			justify-content: center;
+			margin: auto;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div id="form-title">
+			API Form
+		</div>
+
+		<div id="form-body">
+			<form method="post">
+				Username
+				<input type="text" name="form_user" placeholder="Username .." required>
+				Password
+				<input type="Password" name="form_pass" placeholder="Password .." required>
+				Mobile
+				<input type="text" name="form_mobile" placeholder="Mobile .." required>
+				Telephone
+				<input type="text" name="form_phone" placeholder="Telephone .." required>
+				Name
+				<input type="text" name="form_name" placeholder="Name .." required>
+				Address
+				<input type="text" name="form_addr" placeholder="Address .." required>
+				Select employee ID to edit or delete ..
+				<select id="select-employee">
+					<option>--</option>
+				</select>
+				<div class="form-buttons">
+					<button type="reset" class="create-button"> Add </button>
+					<button type="reset" class="update-button"> Update </button>
+					<button type="reset" class="delete-button"> Delete </button>
+					<button type="reset" class="rest-button"> Reset </button>
+				</div>
+			</form>
+		</div>
+		<br><b>Abdelrahman Tarek</b> | <i>innoTech</i>
+	</main>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
