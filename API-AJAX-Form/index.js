@@ -46,6 +46,12 @@ $(document).ready(function(){
 			'Name':$("input[name='form_name']").val(),
 			'address':$("input[name='form_addr']").val(),
 		}
+		for(let key in newEmp){
+			if(newEmp[key] ==''){
+				alert('Fill the form please.');
+				return;
+			}
+		}
 		$.ajax({
 			type: 'POST',
 			url: 'http://employeesintern.azurewebsites.net/api/employees',

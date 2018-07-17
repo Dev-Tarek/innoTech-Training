@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ِInnoTech API Form</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style type="text/css">
+		body{
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid ">
+		<div class="row">
+			<div class="col-lg-3"></div>
+			
+			<div class="col-lg-6">
+				<div class="panel panel-default">
+					<div class="panel-heading"> API Form </div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form role="form" method="post">
+									<label>Username</label>
+									<div class="form-group input-group">
+										<span class="input-group-addon">@</span>
+										<input class='form-control' type="text" name="form_user" placeholder="Username .." required>
+									</div>
+									<div class="form-group">
+										<label>Password</label>
+										<input class='form-control' type="Password" name="form_pass" placeholder="Password .." required>
+									</div>
+									<div class="form-group">
+										<label>Mobile</label>
+										<input class='form-control' type="text" name="form_mobile" placeholder="Mobile .." required>
+									</div>
+									<div class="form-group">
+										<label>Phone</label>
+										<input class='form-control' type="text" name="form_phone" placeholder="Telephone .." required>
+									</div>
+									<div class="form-group">
+										<label>Name</label>
+										<input class='form-control' type="text" name="form_name" placeholder="Name .." required>
+									</div>
+									<div class="form-group">
+										<label>Address</label>
+										<input class='form-control' type="text" name="form_addr" placeholder="Address .." required>
+									</div>
+									<div class="form-group">
+										<label>Select employee ID to edit or delete ..</label>
+										<select id="select-employee" class="form-control">
+											<option>--</option>
+										</select>
+									</div>
+									<div class="form-buttons">
+										<button type="reset" class="create-button btn btn-primary">Add</button>
+										<button type="reset" class="update-button btn btn-info">Update</button>
+										<button type="reset" class="delete-button btn btn-danger">Delete</button>
+										<button type="reset" class="rest-button btn btn-warning">Reset</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<b>Abdelrahman Tarek</b> | <i>innoTech</i>
+			</div>
+			<div class="col-lg-3"></div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+</body>
+</html>
