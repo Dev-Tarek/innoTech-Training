@@ -37,7 +37,7 @@ function displayArguments(){
         console.log(value);
 }
 // Using arguments object, we can pass
-// any number different arguemnts and access them.
+// any number different arguments and access them.
 
 ///displayArguments(1, 2, 'a', 'bc', {'a':1}, undefined, [1,2]);
 
@@ -75,7 +75,7 @@ employee.fullName = `Ahmed Tarek`;
 
 // SCOPE
 // var
-    // funtion-scoped variable
+    // function-scoped variable
     // attached to window object (window.varname)
     // can be re-declared
 // let, const
