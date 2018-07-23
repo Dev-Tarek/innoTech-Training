@@ -1,3 +1,6 @@
+// Add the stopwatch methods to its prototype.
+// This is not needed since we don't need more than one stopwatch.
+
 function Stopwatch(){
     let duration = 0, started = false, a = 0, b = 0;
     Object.defineProperty(this, 'duration', {
