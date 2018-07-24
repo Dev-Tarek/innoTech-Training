@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ِInnoTech API Form</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<style type="text/css">
+		@keyframes gradient { 
+			0%{background-position:0 0}
+			100%{background-position:100% 0}
+		}
+		body{
+			background-color: lightblue;
+		}
+		.panel{
+			margin-top: 10px;
+			box-shadow: 0px 4px 10px -2px;
+		}
+		.panel-heading{
+			font-size: 16px;
+		}
+		.animated-bar{
+			height: 14px;
+			background-position: 0% 0%;
+			background: linear-gradient(to right, white, lime , green, lime, white, lime);
+			background-size: 500% auto !important;
+			animation: gradient 2s linear infinite;
+			border-bottom-left-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid ">
+		<div class="row">
+			<div class="col-lg-3"></div>
+			
+			<div class="col-lg-6">
+				<div class="panel panel-default">
+					<div class="panel-heading"> API Form </div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form role="form" method="post">
+									<label>Username</label>
+									<div class="form-group input-group">
+										<span class="input-group-addon">@</span>
+										<input class='form-control' type="text" name="form_user" placeholder="Username .." required>
+									</div>
+									<div class="form-group">
+										<label>Password</label>
+										<input class='form-control' type="Password" name="form_pass" placeholder="Password .." required>
+									</div>
+									<div class="form-group">
+										<label>Mobile</label>
+										<input class='form-control' type="text" name="form_mobile" placeholder="Mobile .." required>
+									</div>
+									<div class="form-group">
+										<label>Phone</label>
+										<input class='form-control' type="text" name="form_phone" placeholder="Telephone .." required>
+									</div>
+									<div class="form-group">
+										<label>Name</label>
+										<input class='form-control' type="text" name="form_name" placeholder="Name .." required>
+									</div>
+									<div class="form-group">
+										<label>Address</label>
+										<input class='form-control' type="text" name="form_addr" placeholder="Address .." required>
+									</div>
+									<div class="form-group">
+										<label>Select employee ID to edit or delete ..</label>
+										<select id="select-employee" class="form-control">
+											<option>--</option>
+										</select>
+									</div>
+									<div class="form-buttons">
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Add</button>
+										<button type="button" class="btn btn-info" data-toggle="modal" data-target="#Modal2">Update</button>
+										<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal3">Delete</button>
+										<button type="reset" class="btn btn-warning">Reset</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="animated-bar"></div>
+				</div>
+				<b>Abdelrahman Tarek</b> | <i>innoTech</i>
+			</div>
+			<div class="col-lg-3"></div>
+		</div>
+
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="ModalLabel">Confirm</h5>
+	            </div>
+	            <div class="modal-body">
+	                Are you sure you want to <b>add</b> this record?
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	                <button type="button" class="create-button  btn btn-primary">Confirm</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="ModalLabel">Confirm</h5>
+	            </div>
+	            <div class="modal-body">
+	                Are you sure you want to <b>update</b> this record?
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	                <button type="button" class="update-button btn btn-info">Confirm</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="ModalLabel">Confirm</h5>
+	            </div>
+	            <div class="modal-body">
+	                Are you sure you want to <b>delete</b> this record?
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	                <button type="button" class="delete-button btn btn-danger">Confirm</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+
+	<script type="text/javascript" src="../jquery.js"></script>
+	<script type="text/javascript" src="index_bs.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+</body>
+</html>

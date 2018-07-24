@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	let employees = $('#select-employee');
 	let empData;
-	//let lastId = 1;
 
 	$.ajax({
 		type: 'GET',
@@ -10,9 +9,7 @@ $(document).ready(function(){
 			empData = data;
 			$.each(data, function(i, employee){
 				employees.append('<option value="'+employee['id']+'">'+employee['id']+' '+employee['name']+'</option>');
-				//if(employee['id']>lastId) lastId = employee['id'];
 			})
-			//lastId++;
 		}
 	});
 
@@ -31,14 +28,13 @@ $(document).ready(function(){
 		$("input[name='form_name']").val(emp['name']);
 		$("input[name='form_addr']").val(emp['address']);
 	});
-	
+
 	$(".create-button").click(function(){
 		if(employees.val()!='--'){
 			alert("No employee should be selected.");
 			return
 		}
 		let newEmp = {
-			//'Id':lastId,
 			'UserName':$("input[name='form_user']").val(),
 			'Password':$("input[name='form_pass']").val(),
 			'Mobile':$("input[name='form_mobile']").val(),
@@ -58,11 +54,10 @@ $(document).ready(function(){
 			contentType: 'application/json',
 			data: JSON.stringify(newEmp),
 			success: function(){
-				//alert("Added "+lastId+" successfully.");
-				alert("Added successfully.");
 				location.reload();
 			}
 		});
+		$("#actionButton").removeClass('create-button');
 	});
 
 	$(".update-button").click(function(){
@@ -84,10 +79,10 @@ $(document).ready(function(){
 			contentType: 'application/json',
 			data: JSON.stringify(newEmp),
 			success: function(){
-				alert("Updated "+lastId+" successfully.");
-				location.reload();
+				location.reload();	
 			}
 		});
+		$("#actionButton").removeClass('update-button');
 	});
 
 	$(".delete-button").click(function(){
@@ -99,10 +94,10 @@ $(document).ready(function(){
 			type: 'DELETE',
 			url: 'http://employeesintern.azurewebsites.net/api/employees/'+employees.val(),
 			success: function(){
-				alert("Deleted "+lastId+" successfully.");
 				location.reload();	
 			}
 		});
+		$("#actionButton").removeClass('delete-button');
 	});
 
 });
